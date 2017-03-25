@@ -1,5 +1,5 @@
 {
-  "name": "ruumy-web-store",
+  "name": "ruumyWebClient",
   "version": "1.0.0",
   "description": "client side code for ruumy web store",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benflock/ruumy-web-store.git"
+    "url": "git+https://github.com/patrickrauls/ruumyWebClient.git"
   },
   "author": "Patrick Rauls",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/benflock/ruumy-web-store/issues"
+    "url": "https://github.com/patrickrauls/ruumyWebClient/issues"
   },
-  "homepage": "https://github.com/benflock/ruumy-web-store#readme",
+  "homepage": "https://github.com/patrickrauls/ruumyWebClient#readme",
   "dependencies": {
     "angular": "^1.6.3",
     "angular-ui-router": "^1.0.0-beta.1"
