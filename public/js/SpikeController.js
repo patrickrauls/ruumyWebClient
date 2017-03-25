@@ -3,7 +3,7 @@ function SpikeController($http) {
     vm.cart = [];
     vm.$onInit = () => {
         $http
-        .get('http://ec2-34-208-34-115.us-west-2.compute.amazonaws.com/products')
+        .get('https://4n0ta2gd99.execute-api.us-west-2.amazonaws.com/beta')
         .then(response => {
             vm.products = response.data
         })
