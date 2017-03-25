@@ -6,11 +6,18 @@
     <title>RUUMY | Store</title>
     <script type="text/javascript" src="node_modules/angular/angular.js"></script>
     <script defer type="text/javascript" src="js/app.js"></script>
-    <script defer type="text/javascript" src="js/components/landing.js"></script>
+    <script defer type="text/javascript" src="js/SpikeController.js"></script>
 </head>
 
 <body>
-    <landing></landing>
+    <div ng-controller="SpikeController as spike">
+        <ul>
+            <li ng-repeat="product in spike.products">
+                <h2>{{ product.title }}</h2>
+                <div>{{ $index }}: ${{ product.price }}</div>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>
