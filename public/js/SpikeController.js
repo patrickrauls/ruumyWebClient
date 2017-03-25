@@ -1,33 +1,21 @@
-function SpikeController() {
-    this.cart = [];
-    this.products = [
-        {
-            title: 'ruumy',
-            stock: 25,
-            quantity: 1,
-            price: 7,
-            featured: true
-        },
-        {
-            title: 'large',
-            stock: 2,
-            quantity: 1,
-            price: 9
-        },
-        {
-            title: 'small',
-            stock: 0,
-            quantity: 1,
-            price: 5
-        }
-    ]
-    this.addToCart = function (item) {
-        this.cart.includes(item) ?
-            this.cart[this.cart.indexOf(item)].quantity++ :
-            this.cart.push(item)
+function SpikeController($http) {
+    const vm = this;
+    vm.cart = [];
+    vm.$onInit = () => {
+        $http
+        .get('http://ec2-34-208-34-115.us-west-2.compute.amazonaws.com/products')
+        .then(response => {
+            vm.products = response.data
+        })
+        .catch(console.error)
+    }
+    vm.addToCart = function (item) {
+        vm.cart.includes(item) ?
+            vm.cart[vm.cart.indexOf(item)].quantity++ :
+            vm.cart.push(item)
     }
 }
 
 angular
     .module('app')
-    .controller('SpikeController', [SpikeController])
+    .controller('SpikeController', ['$http', SpikeController])

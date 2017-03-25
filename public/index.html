@@ -11,18 +11,13 @@
 
 <body>
     <div ng-controller="SpikeController as spike">
+        <h1>HI</h1>
         <ul>
-            <li ng-repeat="product in spike.products" ng-if="product.stock" 
-            ng-class="product.featured ? featured : regular">
-                <h2>{{ product.title }}</h2>
-                <div>{{ $index }}: ${{ product.price }}</div>
-                <a href="" ng-click="spike.addToCart(product);">add to cart</a>
+            <li ng-repeat="product in spike.products">
+                <h3>{{product.title}}</h3>
+                <div>{{product.description}} <em>${{product.price}}</em></div>
             </li>
         </ul>
-        <div ng-repeat="item in spike.cart">
-            <h2>{{ item.title }}</h2>
-        </div>
-    </div>
 </body>
 
 </html>
