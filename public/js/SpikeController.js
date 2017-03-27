@@ -3,8 +3,9 @@ function SpikeController($http) {
     vm.cart = [];
     vm.$onInit = () => {
         $http
-        .get('https://4n0ta2gd99.execute-api.us-west-2.amazonaws.com/beta')
+        .get('https://ewgyjtvpbe.execute-api.us-west-2.amazonaws.com/v1/products')
         .then(response => {
+            console.log(response);
             vm.products = response.data
         })
         .catch(console.error)
