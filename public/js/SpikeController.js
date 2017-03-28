@@ -3,9 +3,9 @@ function SpikeController($http) {
     vm.cart = [];
     vm.$onInit = () => {
         $http
-        .get('https://ewgyjtvpbe.execute-api.us-west-2.amazonaws.com/v1/products')
+        .get('https://api.getruumy.com/v1/products')
         .then(response => {
-            console.log(response);
+            console.log('response headers', response);
             vm.products = response.data
         })
         .catch(console.error)
