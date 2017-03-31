@@ -1,0 +1,72 @@
+/*
+green #2ecc71
+blue 3498db
+navy 084f6c
+gray 757575
+white fbfbff
+*/
+
+html, body {
+    height: 100%;
+    color: #757575;
+}
+section {
+    min-height: 100%;
+    padding: 0 5%;
+}
+#landing {
+    background: linear-gradient(rgba(251,251,255,1), rgba(251,251,255,0.9), rgba(251,251,255,0.6), rgba(52,152,219,0.6)), url(/img/luggage.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+#landing md-content {
+    background-color: rgba(0,0,0,0);
+    padding: 10rem 0;
+}
+
+.btn1 {
+    background-color: #2ecc71;
+    color: #fff;
+}
+.btn2 {
+    background-color: #3498db;
+    color: #fff;
+}
+.button-container {
+    margin: 3rem 0;
+}
+.margin-left-0 {
+    margin-left: 0;
+}
+.max-width-20 {
+    max-width: 20rem;
+}
+md-content {
+    color: #757575;
+}
+h1 {
+    color: #084F6C;
+    letter-spacing: -0.2rem;
+    font-size: 4.5rem;
+    line-height: 4.2rem;
+    max-width: 40rem;
+    margin: 1rem 0;
+}
+h2 {
+    color: #000;
+}
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2rem;
+    padding: 1rem 5%;
+}
+.over {
+    text-decoration: overline;
+}
+.logo {
+    color: #2ecc71;
+    font-size: 1.5rem;
+}
